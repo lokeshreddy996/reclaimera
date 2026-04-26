@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% block title %}Contact Us | Reclaim Era{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+<h1>Let's Build a Zero-Waste Bengaluru Together</h1>
+<p>Whether you have a bag of clothes to donate, a corporate CSR initiative to fund, or a school ready for our 1-year NEP program, we want to hear from you.</p>
+</section>
+
+<!-- VISIT OUR HUB -->
+<section class="page-section">
+<h2 class="section-title">Visit Our Hub (Drop-Offs)</h2>
+<p class="section-subtitle">
+Come see the "Waste to Wisdom" transformation in action. We accept drop-offs of clean, used clothes, paper items, electronic gadgets, and household materials during our operating hours.
+</p>
+<div class="two-col">
+<div class="info-box">
+<h3>📍 Headquarters & Sorting Hub</h3>
+<p>
+Kogilu, North Bengaluru, Karnataka
+</p>
+</div>
+<div class="info-box">
+<h3>🕒 Operating Hours</h3>
+<p>
+Monday – Saturday, 9:00 AM to 5:00 PM<br>
+(Drop-offs welcome!)
+</p>
+</div>
+</div>
+</section>
+
+<!-- CONNECT WITH THE RIGHT PILLAR -->
+<section class="page-section light">
+<h2 class="section-title">Connect With the Right Pillar</h2>
+<div class="three-grid">
+<div class="info-box">
+<h3>🚚 For Waste Audits & Collection Drives (RWAs/Schools)</h3>
+<p>
+Want to set up a collection bin or a weekend drive at your apartment?
+</p>
+<p><strong>Contact: Divya Tejaswini, Chief Operating Officer (COO)</strong></p>
+<p>📞 +91 [Divya's Phone / Hub Phone]</p>
+<p>✉️ operations@reclaimera.in</p>
+</div>
+<div class="info-box">
+<h3>🤝 For CSR Partnerships, Grants & Bulk Gifting</h3>
+<p>
+Looking to align your corporate ESG goals with our mission, or need bulk upcycled products for an event?
+</p>
+<p><strong>Contact: Smitha Rajarathinam, Head of Finance & Sales</strong></p>
+<p>📞 +91 [Smitha's Phone]</p>
+<p>✉️ partnerships@reclaimera.in</p>
+</div>
+<div class="info-box">
+<h3>💡 For General Inquiries & Volunteering</h3>
+<p>
+Want to get involved or learn more about our mission?
+</p>
+<p><strong>Contact: Jaganathan Rajagopal, Founder & CEO</strong></p>
+<p>📞 +91 [General Phone]</p>
+<p>✉️ hello@reclaimera.in</p>
+</div>
+</div>
+</section>
+
+<!-- SEND US A MESSAGE -->
+<section class="page-section">
+<h2 class="section-title">Send Us a Message</h2>
+<div class="contact-form-box">
+<form class="contact-form" method="POST" action="{{ url_for('contact') }}">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="text" name="phone" placeholder="Phone Number" required>
+<input type="email" name="email" placeholder="Email Address" required>
+
+<select name="interest" required>
+<option value="">I am interested in:</option>
+<option value="donating">Donating Clothes / Household Items</option>
+<option value="audit">Scheduling a Free Waste Audit (RWA/Corporate)</option>
+<option value="school">The 1-Year School Curriculum (NEP 2020)</option>
+<option value="volunteer">Volunteering at the Kogilu Hub</option>
+<option value="gifting">Corporate Gifting & Upcycled Products</option>
+</select>
+
+<textarea name="message" rows="5" placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+</form>
+</div>
+</section>
+
+<!-- LEGAL & FINANCIAL TRUST -->
+<section class="page-section light">
+<h2 class="section-title">Support with Confidence</h2>
+<p class="section-subtitle">
+Reclaim Era is a proud initiative of Lamp Educational and Charitable Trust (LEACT). All monetary donations are eligible for tax exemption under sections 12A and 80G of the Income Tax Act.
+</p>
+<div class="three-grid">
+<div class="info-box">
+<h3>✅ Registered Trust</h3>
+<p>
+Registered under 12A & 80G of the Income Tax Act | CSR Compliant
+</p>
+</div>
+<div class="info-box">
+<h3>🌍 Global Alignment</h3>
+<p>
+Contributing to SDG 4 (Quality Education), SDG 12 (Responsible Consumption), and SDG 13 (Climate Action)
+</p>
+</div>
+<div class="info-box">
+<h3>📱 Social Media</h3>
+<p>
+Follow us on Instagram, LinkedIn, and Facebook for updates and impact stories.
+</p>
+</div>
+</div>
+</section>
+{% endblock %}

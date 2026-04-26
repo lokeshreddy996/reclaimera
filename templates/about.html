@@ -1,0 +1,173 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About - Reclaim Era</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+<div class="nav-container">
+
+<div class="logo">
+<img src="{{ url_for('static', filename='images/logobadge.png') }}" class="badge" alt="Reclaim Era">
+<span class="logo-text">Reclaim Era</span>
+</div>
+
+<nav class="nav-links">
+<a href="{{ url_for('home') }}">Home</a>
+<a href="{{ url_for('about') }}">About</a>
+<a href="{{ url_for('impact') }}">Impact</a>
+<a href="{{ url_for('school') }}">Schools</a>
+<a href="{{ url_for('shop') }}">Shop</a>
+</nav>
+
+</div>
+</header>
+
+<!-- HERO -->
+<section class="about-hero">
+<h1>From a Home in Hegde Nagar to a Movement for Bengaluru</h1>
+<p>Turning environmental responsibility into social opportunity.</p>
+</section>
+
+<!-- OUR STORY -->
+<section class="about-section">
+
+<h2>The Reclaim Era Journey</h2>
+
+<p>
+Reclaim Era is the environmental sustainability initiative of Lamp Educational and Charitable Trust (LEACT).
+Founded on March 26, 2019, by Jaganathan Rajagopal in R.K. Hegde Nagar, our mission began with a simple but urgent dual purpose: 
+to protect our city by keeping textile and household waste out of landfills and open fires, and to secure a brighter future for underprivileged children.
+</p>
+
+<p>
+While LEACT focuses on providing quality education and infrastructure to children who need it most, Reclaim Era works to fund that mission through a circular economy. 
+By collecting, sorting, and upcycling waste at our Kogilu hub, we transform discarded items into the funds that pay our teachers and build our classrooms.
+</p>
+
+<p>
+From a humble beginning to a growing movement, we transform discarded materials into resources that fund education, empower communities, and protect our environment.
+</p>
+
+</section>
+
+<!-- CORE IDENTITY -->
+<section class="about-section light">
+
+<h2>The "Waste to Wisdom" Philosophy</h2>
+
+<p>
+At Reclaim Era, we believe that "waste" is simply a valuable resource in the wrong place. We refuse to accept the "use-and-throw" culture that clogs our landfills and poisons our air.
+</p>
+
+<div class="about-grid">
+
+<div>
+<h3>🌍 Our Vision</h3>
+<p>
+To build a sustainable world where everyday waste is transformed into wisdom—giving discarded items a second life 
+to support those in need, while empowering the next generation with the education to protect our environment.
+</p>
+</div>
+
+<div>
+<h3>🎯 Our Mission</h3>
+<p>
+To transform Bengaluru's everyday waste into wisdom by reclaiming textiles and household items to fund education, 
+create green livelihoods, and protect our environment.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- TEAM -->
+<section class="about-section">
+
+<h2>The Hands and Hearts Behind the Mission</h2>
+
+<p>
+While our mission is massive, it is driven forward every day by a dedicated core leadership team. Together, they ensure that our "Waste to Wisdom" vision becomes a reality on the ground.
+</p>
+
+<div class="team-grid">
+
+<div class="team-card">
+<h3>Jaganathan Rajagopal</h3>
+<p class="role">Founder</p>
+<p>The visionary behind Reclaim Era. Jaganathan identified the critical gap between Bengaluru's mounting textile waste and the underfunded educational needs of the city, founding this initiative to bridge the two through sustainable action.</p>
+</div>
+
+<div class="team-card">
+<h3>Divya Tejaswini</h3>
+<p class="role">Chief Operating Officer (COO)</p>
+<p>The operational engine. Divya oversees the complex logistics of our "Revive, Recycle, Rise" protocol. From managing the Kogilu sorting hub to coordinating grassroots collection drives, she ensures that every piece of donated waste is efficiently processed and channeled to its highest purpose.</p>
+</div>
+
+<div class="team-card">
+<h3>Smitha Rajarathinam</h3>
+<p class="role">Head of Finance & Accounts, Head of Sales</p>
+<p>The financial backbone and growth driver. Smitha ensures that our circular economy model is financially sustainable and transparent. By leading the sales of our upcycled products and managing our accounts, she guarantees that the revenue we generate successfully translates into the "Wisdom" that pays our teachers and funds our classrooms.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GLOBAL ALIGNMENT -->
+<section class="about-section light">
+
+<h2>Acting Locally, Impacting Globally</h2>
+
+<p>
+Reclaim Era's decentralized, dual-impact model is deeply committed to contributing to the United Nations Sustainable Development Goals (SDGs):
+</p>
+
+<div class="three-grid">
+<div class="info-box">
+<h3>SDG 4</h3>
+<p>Quality Education</p>
+</div>
+<div class="info-box">
+<h3>SDG 12</h3>
+<p>Responsible Consumption and Production</p>
+</div>
+<div class="info-box">
+<h3>SDG 13</h3>
+<p>Climate Action</p>
+</div>
+</div>
+
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="about-section">
+
+<h2>Join Our Story</h2>
+
+<p>
+We don't just clean the city; we educate its future. But we cannot do it alone.
+</p>
+
+<div class="cta-buttons">
+<a href="{{ url_for('contact') }}" class="cta-btn primary">Volunteer at our Kogilu Hub</a>
+<a href="{{ url_for('contact') }}" class="cta-btn secondary">Partner with Us (CSR & NGOs)</a>
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+<p>© 2026 Reclaim Era</p>
+</footer>
+
+</body>
+</html>

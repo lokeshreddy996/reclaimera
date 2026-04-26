@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Add Product</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4f6f9;
+padding:40px;
+}
+
+.form-box{
+background:white;
+padding:30px;
+border-radius:10px;
+width:400px;
+margin:auto;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+input{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+}
+
+button{
+padding:12px;
+background:#1f5c55;
+color:white;
+border:none;
+width:100%;
+cursor:pointer;
+}
+
+button:hover{
+background:#174640;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="form-box">
+
+<h2>Add Product</h2>
+
+<form method="POST" action="/admin/save-product" enctype="multipart/form-data">
+
+<input type="text" name="name" placeholder="Product Name" required>
+
+<input type="number" name="price" placeholder="Price" required>
+
+<input type="file" name="image" required>
+
+<button type="submit">Add Product</button>
+
+</form>
+
+</div>
+</body>
+
+</html>

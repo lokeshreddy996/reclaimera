@@ -1,0 +1,243 @@
+{% extends "base.html" %}
+
+{% block title %}Reclaim Era - Waste to Wisdom{% endblock %}
+
+{% block content %}
+<!-- HERO -->
+<section id="home" class="hero">
+<div class="hero-content">
+<h1>WASTE TO WISDOM</h1>
+<p>
+Revive. Recycle. Rise. We are transforming Bengaluru's discarded textiles 
+and household items into education, green livelihoods, and a cleaner environment.
+</p>
+<div class="hero-buttons">
+<a href="#pickup" class="btn primary">Schedule a Pick-Up</a>
+<a href="{{ url_for('shop') }}" class="btn secondary">Shop & Support</a>
+</div>
+</div>
+</section>
+
+<!-- CORE IDENTITY SECTION -->
+<section class="about-section fade-section">
+<div class="container">
+<h2 class="section-title">About Reclaim Era</h2>
+<p class="section-subtitle">
+Reclaim Era is the environmental sustainability initiative of Lamp Educational and Charitable Trust (LEACT). 
+Founded on March 26, 2019, from a humble home in R.K. Hegde Nagar and now operating from our dedicated hub in Kogilu, 
+we bridge the gap between ecological neglect and social inequality in Bengaluru.
+</p>
+<div class="about-grid">
+<div class="info-box">
+<h3>🌍 Our Vision</h3>
+<p>
+To build a sustainable world where everyday waste is transformed into wisdom—giving discarded items a second life 
+to support those in need, while empowering the next generation with the education to protect our environment.
+</p>
+</div>
+<div class="info-box">
+<h3>🎯 Our Mission</h3>
+<p>
+To transform Bengaluru's everyday waste into wisdom by reclaiming textiles and household items to fund education, 
+create green livelihoods, and protect our environment.
+</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- THE PROBLEM SECTION -->
+<section class="page-section light">
+<div class="container">
+<h2 class="section-title">A Dual Crisis: Textile Waste & Theoretical Education</h2>
+<p class="section-subtitle">
+Bengaluru processes only a fraction of its 6,500 tonnes of daily waste. We are stepping in to solve two critical, unaddressed gaps:
+</p>
+<div class="two-col">
+<div class="info-box">
+<h3>🧺 The "Invisible" Textile Burden</h3>
+<p>
+Bengaluru generates 220 tonnes of textile waste daily. Lacking collection infrastructure, over 75% is illegally burned, 
+releasing toxins that spike the Air Quality Index (AQI) and forcing sanitary workers to handle hazardous mixed waste.
+</p>
+</div>
+<div class="info-box">
+<h3>📚 The Educational Disconnect</h3>
+<p>
+While NEP 2020 mandates environmental education, schools struggle. Students memorize textbook concepts without the campus 
+infrastructure to practice waste segregation, and overburdened teachers lack the time to design hands-on sustainability programs.
+</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- THE SOLUTION SECTION -->
+<section class="page-section">
+<div class="container">
+<h2 class="section-title">Our Decentralized Circular Model</h2>
+<p class="section-subtitle">
+We execute our core protocol to support Bengaluru's vision of a landfill-free city.
+</p>
+<div class="three-grid">
+<div class="info-box">
+<h3>♻️ Revive (Community Relief)</h3>
+<p>
+We collect and sanitize good-quality, wearable clothes and household items, distributing them directly to rural communities and those in need.
+</p>
+</div>
+<div class="info-box">
+<h3>🏭 Recycle (Zero Landfill)</h3>
+<p>
+Torn or soiled fabrics are channeled to industrial shredders, strictly diverting them from landfills and toxic open burning.
+</p>
+</div>
+<div class="info-box">
+<h3>📈 Rise (Fund & Empower)</h3>
+<p>
+We upcycle heavy fabrics like denim into premium lifestyle products. 100% of the proceeds from these products directly fund LEACT's educational programs and teacher salaries.
+</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- OUR IMPACT SECTION -->
+<section class="impact-page light">
+<div class="container">
+<h2 class="section-title">A Year of Action (March 2025 – Present)</h2>
+<p class="section-subtitle">
+We don't just talk about sustainability; we deliver measurable results.
+</p>
+<div class="impact-grid">
+<div class="impact-card">
+<h3>11,000+</h3>
+<p>Items Diverted from Landfills</p>
+</div>
+<div class="impact-card">
+<h3>6</h3>
+<p>Women Given Green Livelihoods</p>
+</div>
+<div class="impact-card">
+<h3>4</h3>
+<p>Government Schools Reached</p>
+</div>
+<div class="impact-card">
+<h3>100%</h3>
+<p>Revenue Funding Education</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PARTNER WITH US SECTION -->
+<section class="services fade-section">
+<div class="container">
+<h2 class="section-title">Choose Your Impact Pathway</h2>
+<div class="services-container">
+<div class="service-card">
+<h3>🎓 For Schools & Colleges</h3>
+<p>Move from textbook theory to real-world action. Partner with us for a 1-Year Environmental Curriculum featuring interactive workshops, student-led "Zero Waste Audits," and on-campus collection stations.</p>
+<a href="{{ url_for('school') }}" class="service-btn">Explore Program</a>
+</div>
+<div class="service-card">
+<h3>🏢 For Residential Communities & Corporates</h3>
+<p>Transform your apartment complex or office into a certified eco-friendly zone. We offer free waste audits and seamless collection drives.</p>
+<a href="{{ url_for('certification') }}" class="service-btn">Get Certified</a>
+</div>
+<div class="service-card">
+<h3>🛍 Shop with Purpose</h3>
+<p>Every product in our store is handcrafted by the women of our Upcycling Academy. Buy a durable denim tote or corporate organizer, and 100% of the profits pay a teacher's salary.</p>
+<a href="{{ url_for('shop') }}" class="service-btn">Visit Shop</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- THE TEAM SECTION -->
+<section class="page-section light">
+<div class="container">
+<h2 class="section-title">The Team Driving the Impact</h2>
+<div class="team-grid">
+<div class="team-card">
+<h3>Jaganathan Rajagopal</h3>
+<p class="role">Founder</p>
+<p>The visionary who identified the critical gap between Bengaluru's mounting textile waste and the underfunded educational needs of the city.</p>
+</div>
+<div class="team-card">
+<h3>Divya Tejaswini</h3>
+<p class="role">Chief Operating Officer</p>
+<p>The operational engine overseeing the complex logistics of our Kogilu hub, grassroots collection drives, and the "Revive, Recycle, Rise" protocol.</p>
+</div>
+<div class="team-card">
+<h3>Smitha Rajarathinam</h3>
+<p class="role">Head of Finance & Sales</p>
+<p>The financial backbone ensuring our circular economy model is transparent, sustainable, and successfully translates waste revenue into educational funding.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- HOW WE WORK SECTION -->
+<section class="page-section">
+<div class="container">
+<h2 class="section-title">How We Work: The Journey from Waste to Wisdom</h2>
+<div class="process-container">
+<div class="process-step">
+<div class="step-icon">1</div>
+<h3>Hyper-Local Collection</h3>
+<p>We gather discarded textiles and household items through community drop-offs, corporate drives, and campus revive stations.</p>
+</div>
+<div class="process-step">
+<div class="step-icon">2</div>
+<h3>Sorting & Triage</h3>
+<p>Once the waste arrives at our Kogilu hub, our trained team weighs, sorts, and categorizes every item based on our 3-Way Recovery Protocol.</p>
+</div>
+<div class="process-step">
+<div class="step-icon">3</div>
+<h3>Revive, Recycle, Rise</h3>
+<p>Good items are sanitized and donated; torn fabrics are recycled; durable fabrics are upcycled into premium products.</p>
+</div>
+<div class="process-step">
+<div class="step-icon">4</div>
+<h3>Delivering the Wisdom</h3>
+<p>100% of proceeds from upcycled products fund LEACT's educational programs, teacher salaries, and classroom infrastructure.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- GET INVOLVED SECTION -->
+<section class="cta fade-section">
+<div class="cta-container">
+<h2>Roll Up Your Sleeves. Join the Movement.</h2>
+<p>
+Whether you have a few hours on a weekend or want to lead a community drive, we need your hands and your passion.
+</p>
+<div class="cta-buttons">
+<a href="{{ url_for('contact') }}" class="cta-btn primary">Sign Up to Volunteer</a>
+<a href="{{ url_for('contact') }}" class="cta-btn secondary">Make an 80G Tax-Exempt Donation</a>
+</div>
+</div>
+</section>
+
+<!-- PICKUP FORM SECTION -->
+<section id="pickup" class="pickup-section">
+<div class="container">
+<h2 class="section-title">Schedule a Pick-Up</h2>
+<p class="section-subtitle">
+Ready to donate? Fill out the form below and we'll collect your items from your location.
+</p>
+<div class="pickup-form">
+<form method="POST" action="{{ url_for('pickup') }}">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="text" name="phone" placeholder="Phone Number" required>
+<input type="text" name="address" placeholder="Pickup Address" required>
+<input type="text" name="weight" placeholder="Estimated Weight (kg)">
+<input type="date" name="date" required>
+<button type="submit" class="btn primary">Schedule Pick-Up</button>
+</form>
+</div>
+</div>
+</section>
+{% endblock %}

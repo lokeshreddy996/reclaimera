@@ -1,0 +1,183 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Admin Dashboard</title>
+
+<style>
+
+body{
+font-family:Arial, sans-serif;
+background:#f4f6f8;
+margin:0;
+padding:40px;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+h1{
+margin-bottom:25px;
+color:#333;
+}
+
+.top-actions{
+margin-bottom:25px;
+}
+
+.btn{
+display:inline-block;
+padding:10px 18px;
+border-radius:6px;
+text-decoration:none;
+font-size:14px;
+margin-right:10px;
+}
+
+.btn-primary{
+background:#1f5c55;
+color:white;
+}
+
+.btn-secondary{
+background:#3498db;
+color:white;
+}
+
+.btn-danger{
+background:#e74c3c;
+color:white;
+}
+
+.btn:hover{
+opacity:0.9;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+table th{
+background:#f5f5f5;
+padding:12px;
+text-align:left;
+}
+
+table td{
+padding:12px;
+border-bottom:1px solid #eee;
+}
+
+.product-img{
+width:70px;
+height:70px;
+object-fit:cover;
+border-radius:6px;
+}
+
+.actions a{
+margin-right:8px;
+}
+
+.no-products{
+padding:20px;
+color:#777;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Admin Dashboard</h1>
+
+<div class="top-actions">
+
+<a class="btn btn-primary" href="/admin/add-product">
+Add Product
+</a>
+
+<a class="btn btn-secondary" href="/admin/pickups">
+Pickup Requests
+</a>
+
+<a class="btn btn-danger" href="/logout">
+Logout
+</a>
+
+</div>
+
+<h2>Products</h2>
+
+<table>
+
+<tr>
+<th>Image</th>
+<th>Name</th>
+<th>Price</th>
+<th>Actions</th>
+</tr>
+
+{% if products %}
+
+{% for product in products %}
+
+<tr>
+
+<td>
+<img class="product-img"
+src="{{ url_for('static', filename='uploads/' + product.image) }}">
+</td>
+
+<td>{{ product.name }}</td>
+
+<td>₹{{ product.price }}</td>
+
+<td class="actions">
+
+<a class="btn btn-secondary"
+href="/admin/edit-product/{{ product.id }}">
+Edit
+</a>
+
+<a class="btn btn-danger"
+href="/admin/delete-product/{{ product.id }}"
+onclick="return confirm('Delete this product?')">
+Delete
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+{% else %}
+
+<tr>
+<td colspan="4" class="no-products">
+No products added yet
+</td>
+</tr>
+
+{% endif %}
+
+</table>
+
+</div>
+
+</body>
+</html>

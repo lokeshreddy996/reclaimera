@@ -1,0 +1,188 @@
+ {% extends "base.html" %}
+{% block title %}Shop with Purpose | Reclaim Era | Upcycle Shop{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+<h1>Shop with Purpose. Empower a Child.</h1>
+<p>Every product in our store is handcrafted from reclaimed materials. 100% of the proceeds directly fund teachers' salaries and classroom infrastructure at Lamp Educational and Charitable Trust (LEACT).</p>
+</section>
+
+<!-- THE IMPACT OF YOUR PURCHASE -->
+<section class="page-section">
+<h2 class="section-title">More Than Just a Product</h2>
+<p class="section-subtitle">
+When you purchase from the Reclaim Era Shop, you are driving our "Waste to Wisdom" circular economy.
+</p>
+<div class="three-grid">
+<div class="info-box">
+<h3>🌍 Zero Waste</h3>
+<p>
+You are keeping heavy fabrics like denim out of Bengaluru's landfills and incinerators.
+</p>
+</div>
+<div class="info-box">
+<h3>👩🏽 Green Livelihoods</h3>
+<p>
+Your purchase supports the stable income of the talented women artisans in our Upcycling Academy.
+</p>
+</div>
+<div class="info-box">
+<h3>📚 Education Funded</h3>
+<p>
+Every rupee of profit goes directly toward educating underprivileged children.
+</p>
+</div>
+</div>
+</section>
+
+<!-- PRODUCT CATEGORIES -->
+<section class="page-section light">
+<h2 class="section-title">Our Product Categories</h2>
+
+<!-- EVERYDAY UPCYCLED DENIM -->
+<div class="product-category">
+<h3>👜 Everyday Upcycled Denim</h3>
+<p>Durable, stylish, and completely unique. No two bags are exactly alike.</p>
+<div class="product-grid">
+{% for product in products %}
+{% if product.category == 'denim' %}
+<div class="product-card">
+<img src="{{ url_for('static', filename='uploads/' + product.image) }}">
+<h3>{{ product.name }}</h3>
+<p>₹{{ product.price }}</p>
+<a href="{{ url_for('contact') }}" class="buy-btn">Enquire</a>
+</div>
+{% endif %}
+{% endfor %}
+</div>
+</div>
+
+<!-- CAMPUS & TECH GEAR -->
+<div class="product-category">
+<h3>🎒 Campus & Tech Gear</h3>
+<p>Protect your gear while protecting the planet. Perfect for students and professionals.</p>
+<div class="product-grid">
+{% for product in products %}
+{% if product.category == 'tech' %}
+<div class="product-card">
+<img src="{{ url_for('static', filename='uploads/' + product.image) }}">
+<h3>{{ product.name }}</h3>
+<p>₹{{ product.price }}</p>
+<a href="{{ url_for('contact') }}" class="buy-btn">Enquire</a>
+</div>
+{% endif %}
+{% endfor %}
+</div>
+</div>
+
+<!-- OFFICE & HOME ORGANIZERS -->
+<div class="product-category">
+<h3>🗂️ Office & Home Organizers</h3>
+<p>Declutter your space with zero-waste storage solutions.</p>
+<div class="product-grid">
+{% for product in products %}
+{% if product.category == 'organizer' %}
+<div class="product-card">
+<img src="{{ url_for('static', filename='uploads/' + product.image) }}">
+<h3>{{ product.name }}</h3>
+<p>₹{{ product.price }}</p>
+<a href="{{ url_for('contact') }}" class="buy-btn">Enquire</a>
+</div>
+{% endif %}
+{% endfor %}
+</div>
+</div>
+
+<!-- ALL PRODUCTS (FALLBACK) -->
+{% if products %}
+<div class="product-category">
+<h3>🛍️ All Products</h3>
+<div class="product-grid">
+{% for product in products %}
+<div class="product-card">
+<img src="{{ url_for('static', filename='uploads/' + product.image) }}">
+<h3>{{ product.name }}</h3>
+<p>₹{{ product.price }}</p>
+<a href="{{ url_for('contact') }}" class="buy-btn">Enquire</a>
+</div>
+{% endfor %}
+</div>
+</div>
+{% else %}
+<p style="text-align:center; padding:40px;">No products available yet. Check back soon!</p>
+{% endif %}
+
+</section>
+
+<!-- MEET THE MAKERS -->
+<section class="page-section">
+<h2 class="section-title">Meet the Makers</h2>
+<p class="section-subtitle">
+Crafted with Pride at the Kogilu Hub
+</p>
+<p>
+Our products are not made in a massive, faceless factory. They are carefully designed and stitched by the women of our Upcycling Academy. 
+By transforming waste management into a skilled livelihood, we have empowered our artisans to earn a stable, dignified income, 
+creating true micro-entrepreneurship right here in North Bengaluru.
+</p>
+<div class="team-grid">
+<div class="team-card">
+<h3>Our Artisans</h3>
+<p class="role">6 Women Artisans</p>
+<p>Earning ₹8,000/month through upcycling initiatives since November 2025</p>
+</div>
+<div class="team-card">
+<h3>Green Livelihoods</h3>
+<p class="role">Sustainable Income</p>
+<p>Creating consistent, dignified employment opportunities for women from low-income groups</p>
+</div>
+<div class="team-card">
+<h3>Micro-Entrepreneurship</h3>
+<p class="role">Skill Development</p>
+<p>Training in tailoring and upcycling to build independent livelihoods</p>
+</div>
+</div>
+</section>
+
+<!-- CORPORATE & BULK GIFTING -->
+<section class="page-section light">
+<h2 class="section-title">Corporate & Bulk Gifting (B2B)</h2>
+<p class="section-subtitle">
+Meaningful Gifting for Your Team or Event
+</p>
+<p>
+Looking for sustainable, impactful gifts for your employees, conference attendees, or festival celebrations? Reclaim Era offers custom-branded, upcycled products for bulk orders.
+</p>
+<p>
+By choosing us for your corporate gifting, your company actively supports SDG 12 (Responsible Consumption) and SDG 4 (Quality Education), making it a perfect addition to your CSR and ESG initiatives.
+</p>
+<div class="cta-buttons" style="justify-content:center; margin-top:30px;">
+<a href="{{ url_for('contact') }}" class="cta-btn primary">Request a Bulk Order Catalog</a>
+</div>
+</section>
+
+<!-- CHECKOUT PROMISE -->
+<section class="page-section">
+<h2 class="section-title">The Checkout Promise</h2>
+<div class="three-grid">
+<div class="info-box">
+<h3>🚚 Local Delivery</h3>
+<p>
+Shipping across Bengaluru and nationwide.
+</p>
+</div>
+<div class="info-box">
+<h3>♻️ Eco-Packaging</h3>
+<p>
+All items are shipped in 100% plastic-free, upcycled or recyclable packaging.
+</p>
+</div>
+<div class="info-box">
+<h3>❤️ Thank You</h3>
+<p>
+Your invoice will include exactly how your purchase is helping fund LEACT.
+</p>
+</div>
+</div>
+</section>
+{% endblock %}
